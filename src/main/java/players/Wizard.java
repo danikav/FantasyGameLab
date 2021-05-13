@@ -51,7 +51,6 @@ public class Wizard extends Player{
 //            enemy.missTurn();
 //        }
     }
-    @Override
     public void useItem(Item item){
         switch (item){
             case ATTACKPOTION:

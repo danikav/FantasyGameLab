@@ -1,53 +1,53 @@
 package quests;
 
+import enemies.Enemy;
+import players.Knight;
+import players.Player;
+import utilities.Item;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+import static java.lang.Integer.parseInt;
+
 public class Quest {
 
-    // Scanner input = new Scanner(
+    Scanner scanner = new Scanner(System.in);
 
-    // ARRAYLIST
-    // QUESTCOUNTER
+    private int questCounter;
+    private int turnCounter;
+//    private ArrayList<Event> events;
 
-    //ADDTOARRAYLIST
+    public Quest(int questCounter, int turnCounter){
+        this.questCounter = questCounter;
+        this.turnCounter = turnCounter;
+//        this.events = new ArrayList<>();
+    }
 
-    //QUESTARRAY.GET(QUESTCOUNTER)
-    // IF ENENMYEVENT:
-    // ENEMYEVENT()
-
-    //ENEMYEVENT() {
-    // WHILE ENEMY ALIVE AND PLAYER ALIVE LOOP:
-    // STRING VAR = CHOOSE ATTACK DEFEND OR USE
-    // IF ATTACK {
-    // PLAYER.ATTACK()}
-    // IF DEFEND {
-    // PLAYER.DEFEND()}
-    // IF USE {
-    // PLAYER.USE()}
-    //
-
-
-    // QUEST = []
-    // QUEST ADD EVENTS = [ENEMYEVENT, NOTHINGEVENT, TREASUREEVENT]
-    // ENTER PLAYER: KNIGHT SWORD, 100
-    // QUESTCOUNTER = 0:
-    // ENEMYEVENT STARTS
-    // TURNCOUNTER = 0;
-    // PLAYER ATTACKS;
-    // TURNCOUNTER = 1;
-    // ENEMY ATTACKS;
-    // TURNCOUNTER = 2;
-    // PLAYER ATTACKS;
-    // PLAYER WINS, QUESTCOUNTER = 1;
-
-
-
+    public void enemyEvent(Enemy enemy, Knight knight){
+        while(enemy.getHealth() > 0 && knight.getHealth() > 0){
+            System.out.println("1. Attack, 2. Defend, 3. Use Item");
+            String input = scanner.next();
+            int choice = parseInt(input);
+            if(choice == 1){
+                knight.attack(enemy);
+            }
+            else if(choice == 2){
+                knight.defend(enemy);
+            }
+            else if(choice == 3){
+                knight.viewInventory();
+                System.out.println("Choose one of the items");
+                String newInput = scanner.next();
+                int itemChoice = parseInt(newInput);
+                knight.useItem(itemChoice);
+            }
+            enemy.attack(knight);
+            System.out.println("Enemy" + enemy.getHealth());
+            System.out.println("Player" + knight.getHealth());
+        }
+        System.out.println("Well done!");
+    }
 
 
-    // NOTHING STARTS;
-    // TURNCOUNTER = 0;
-    // USEITEM OR GOTONEXTEVENT;
-    // USEITEM;
-    // QUESTCOUNTER = 2;
-    // TREASUREEVENT STARTS;
-    // TAKEITEM OR NOTHING;
-    // GAME ENDS OR BOSS.
 }

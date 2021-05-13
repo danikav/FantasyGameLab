@@ -57,34 +57,34 @@ public abstract class Player {
         }
     }
 
-    public void useItem(Item item){
-        switch (item){
-            case ATTACKPOTION:
-                attackObject.setAttackPower(item.getObjectPower());
-                this.inventory.remove(item);
+    public void useItem(int index){
+        switch (index){
+            case 1:
+                attackObject.setAttackPower(Item.ATTACKPOTION.getObjectPower());
+                this.inventory.remove(Item.ATTACKPOTION);
                 break;
-            case HEALINGPOWERPOTION:
-                attackObject.setHealingPower(item.getObjectPower());
-                this.inventory.remove(item);
+            case 2:
+                attackObject.setHealingPower(Item.HEALINGPOTION.getObjectPower());
+                this.inventory.remove(Item.HEALINGPOTION);
                 break;
-            case SPELLPOTION:
-                attackObject.setMagicPower(item.getObjectPower());
-                this.inventory.remove(item);
+            case 3:
+                attackObject.setMagicPower(Item.SPELLPOTION.getObjectPower());
+                this.inventory.remove(Item.SPELLPOTION);
                 break;
-            case GOLD:
+            case 4:
                 System.out.println("Gold does nothing!");
-                this.inventory.remove(item);
+                this.inventory.remove(Item.GOLD);
                 break;
-            case HEALINGPOTION:
+            case 5:
                 if(health < 80){
                     health += 20;
                 }
                 else { health = 100;}
-                this.inventory.remove(item);
+                this.inventory.remove(Item.HEALINGPOTION);
                 break;
-            case MANAPOTION:
+            case 6:
                 System.out.println("You are not a wizard");
-                this.inventory.remove(item);
+                this.inventory.remove(Item.MANAPOTION);
 //                health += 1;
                 break;
                 }

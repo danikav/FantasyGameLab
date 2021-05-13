@@ -1,5 +1,8 @@
 package quests;
 
-public abstract class Event {
+public enum Event {
+
+
+
 
 }
