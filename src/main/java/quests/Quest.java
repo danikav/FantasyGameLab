@@ -1,0 +1,53 @@
+package quests;
+
+public class Quest {
+
+    // Scanner input = new Scanner(
+
+    // ARRAYLIST
+    // QUESTCOUNTER
+
+    //ADDTOARRAYLIST
+
+    //QUESTARRAY.GET(QUESTCOUNTER)
+    // IF ENENMYEVENT:
+    // ENEMYEVENT()
+
+    //ENEMYEVENT() {
+    // WHILE ENEMY ALIVE AND PLAYER ALIVE LOOP:
+    // STRING VAR = CHOOSE ATTACK DEFEND OR USE
+    // IF ATTACK {
+    // PLAYER.ATTACK()}
+    // IF DEFEND {
+    // PLAYER.DEFEND()}
+    // IF USE {
+    // PLAYER.USE()}
+    //
+
+
+    // QUEST = []
+    // QUEST ADD EVENTS = [ENEMYEVENT, NOTHINGEVENT, TREASUREEVENT]
+    // ENTER PLAYER: KNIGHT SWORD, 100
+    // QUESTCOUNTER = 0:
+    // ENEMYEVENT STARTS
+    // TURNCOUNTER = 0;
+    // PLAYER ATTACKS;
+    // TURNCOUNTER = 1;
+    // ENEMY ATTACKS;
+    // TURNCOUNTER = 2;
+    // PLAYER ATTACKS;
+    // PLAYER WINS, QUESTCOUNTER = 1;
+
+
+
+
+
+    // NOTHING STARTS;
+    // TURNCOUNTER = 0;
+    // USEITEM OR GOTONEXTEVENT;
+    // USEITEM;
+    // QUESTCOUNTER = 2;
+    // TREASUREEVENT STARTS;
+    // TAKEITEM OR NOTHING;
+    // GAME ENDS OR BOSS.
+}
